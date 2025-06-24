@@ -1,0 +1,23 @@
+var global: string = "this is a global variable!\n";
+
+func test(a: float, b: float): bool {
+    var c: int = 1;  // variable declaration
+
+    // loop with single-statement body
+    while (a < 1e-5) a -= b;
+
+    /* for-loop with variable declaration */
+    for (var i: int = 0; i < 10; i += 1) {
+        print("iter: ", i);
+    }
+
+    input(b, c);
+
+    if (a * b > 100.) {
+        a = -a;
+    } else {
+        b *= -1;
+    }
+
+    return a > b && a <= 2 * b;
+}
